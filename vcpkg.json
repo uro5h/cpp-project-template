@@ -1,0 +1,12 @@
+{
+  "name": "cpp-project-template",
+  "version-string": "0.0.1",
+  "description": "The missing open source music production/performance software",
+  "dependencies": [
+    {
+      "name": "fmt",
+      "version>=": "8.1.1"
+    }
+  ],
+  "builtin-baseline": "aebb363eaa0b658beb19cbefdd5aa2f9cbc14f1e"
+}
