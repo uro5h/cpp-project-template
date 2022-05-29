@@ -1,19 +1,23 @@
-# My modern C++ project template (boilerplate)
+# Modern C++ project template (boilerplate)
 
-Adapted from some of my pet projects, and to be used as a starting point for new projects. **Needs more work and refining**.
+Adapted from some of my pet projects, intended to be used as a starting template (boilerplate) for new projects.
+
+**Needs more work and refining, but it is a solid starting point for new projects (in its current state).**
+
+Rename `app` and `lib` to your own liking (both dirs and all occurrences) and build upon. Cheers :beers:.
 
 ## Notes:
 - `cmake` build system (min: `3.22`)
-- for both `app` and `lib`, `fmtlog` logging package is included
-- Package management using `vcpkg`
+- package management using `vcpkg`
 - separate shared library (`lib`) project
-- `app` project that links `lib`
-- auto generation of config.h file (that contains project constants that are part of the build, `config.h.in`)
+- `app` project that links and includes `lib`
+- both `app` and `lib` projects include `fmtlog` (logging library/package)
+- auto generation of `config.h` file for both `app` and `lib` project (`config.h` contains project constants that are specified in the cmake files, or passed as parameters in the future, `config.h.in`)
 - `.clang-format`, `.editorconfig`, `.gitignore`...
 - `header-only` libs go should go into `deps/`
-- tested on latest macOS (intel, m1) and windows
-- plays nicely with vscode (with `c++`, `cmake`, `clang-format` extensions), visual studio 2022 and CLion
-- look at `fmt` on how to add packages with vcpkg (relevant files: `vcpkg.json` and project `CMakeLists.txt` files)
+- tested on latest macOS monterey (both intel, m1) and windows
+- plays nicely with vscode (with `c++`, `cmake`, `clang-format` extensions), Visual Studio 2022 and CLion
+- look at the way `fmt` library is included in cmake and vcpkg files on more info on how to add packages with vcpkg and include in project (relevant files: `vcpkg.json` and project `CMakeLists.txt` files)
 
 ## Future improvements:
 - **Improve and refine further**
@@ -23,7 +27,7 @@ Adapted from some of my pet projects, and to be used as a starting point for new
 - ... (feel free to suggest)
 
 ## Steps to run/setup
-1. Get all git submodules
+1. Get all the git submodules
 ```
 git submodule update --init --recursive
 ```
@@ -49,4 +53,5 @@ cmake --build . --config Debug --target ALL_BUILD -j 18
 Debug/app.exe
 ```
 
-## PR's are more than welcome :)
+## Contributing
+**PRs, suggestions, discussions are always welcome!**
