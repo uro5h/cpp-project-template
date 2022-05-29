@@ -1,4 +1,4 @@
-# my cpp-project-template
+# My modern C++ project template (boilerplate)
 
 Adapted from some of my pet projects, and to be used as a starting point for new projects. **Needs more work and refining**.
 
@@ -16,6 +16,7 @@ Adapted from some of my pet projects, and to be used as a starting point for new
 - look at `fmt` on how to add packages with vcpkg (relevant files: `vcpkg.json` and project `CMakeLists.txt` files)
 
 ## Future improvements:
+- **Improve and refine further**
 - Add testing
 - Add install targets
 - `vcpkg` per project, or a way to build/split packages/projects in a modular way
