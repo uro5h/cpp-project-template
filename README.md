@@ -14,7 +14,7 @@ Rename `app` and `lib` to your own liking (both dirs and all occurrences) and bu
 - both `app` and `lib` projects include `fmtlog` (logging library/package)
 - auto generation of `config.h` file for both `app` and `lib` project (`config.h` contains project constants that are specified in the cmake files, or passed as parameters in the future, `config.h.in`)
 - `.clang-format`, `.editorconfig`, `.gitignore`...
-- `header-only` libs go should go into `deps/`
+- `header-only` libs go should go into `deps/`, also manual dependencies that are not installed with `vcpkg` should go here (as git submodule, or copied entirely)
 - tested on latest macOS monterey (both intel, m1) and windows
 - plays nicely with vscode (with `c++`, `cmake`, `clang-format` extensions), Visual Studio 2022 and CLion
 - look at the way `fmt` library is included in cmake and vcpkg files on more info on how to add packages with vcpkg and include in project (relevant files: `vcpkg.json` and project `CMakeLists.txt` files)
